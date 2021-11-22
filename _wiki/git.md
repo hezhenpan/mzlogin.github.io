@@ -1,6 +1,8 @@
 ---
 layout: wiki
 title: Git
+cate1: Tools
+cate2: Version Control
 categories: Git
 description: Git 常用操作记录。
 keywords: Git, 版本控制
@@ -70,13 +72,19 @@ git stash list
 查看某一次 stash 的改动文件列表（不传最后一个参数默认显示最近一次）：
 
 ```
-git stash show stash@{0}
+git stash show "stash@{0}"
 ```
 
 以 patch 方式显示改动内容
 
 ```
-git stash show -p stash@{0}
+git stash show -p "stash@{0}"
+```
+
+应用某次 stash 改动内容：
+
+```
+git stash apply "stash@{0}"
 ```
 
 ### 如何合并 fork 的仓库的上游更新？
@@ -163,13 +171,6 @@ git submodule update --init --recursive
 ```
 
 ### 删除远程 tag
-
-```
-git tag -d v0.0.9
-git push origin :refs/tags/v0.0.9
-```
-
-或
 
 ```
 git push origin --delete tag [tagname]
@@ -472,7 +473,7 @@ CMD 下直接执行可能失败，可以在右键，Git Bash here 里执行。
 git log --author="$(git config --get user.name)" --pretty=tformat: --numstat | gawk '{ add += $1 ; subs += $2 ; loc += $1 - $2 } END { printf "added lines: %s removed lines : %s total lines: %s\n",add,subs,loc }'
 ```
 
-#### 仓库提交都排名前 5
+#### 仓库提交者排名前 5
 
 如果看全部，去掉 head 管道即可。
 
@@ -590,3 +591,90 @@ fatal: no man viewer handled the request
 ```
 git config --global help.format web
 ```
+
+### 比较两个分支的差异
+
+显示出所有差异详情：
+
+```sh
+git diff <branch_name_1> <branch_name_2>
+```
+
+显示有差异的文件列表：
+
+```sh
+git diff <branch_name_1> <branch_name_2> --stat
+```
+
+显示指定文件的差异详情：
+
+```sh
+git diff <branch_name_1> <branch_name_2> <filename>
+```
+
+查看 A 分支有，B 分支没有的提交：
+
+```sh
+git log <branch_name_A> ^<branch_name_B>
+```
+
+### git 操作时报警告
+
+警告信息：
+
+```
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@       WARNING: POSSIBLE DNS SPOOFING DETECTED!          @
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+The ECDSA host key for gitlab.xxxx.com has changed,
+and the key for the corresponding IP address 121.40.151.8
+is unknown. This could either mean that
+DNS SPOOFING is happening or the IP address for the host
+and its host key have changed at the same time.
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@    WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!     @
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+IT IS POSSIBLE THAT SOMEONE IS DOING SOMETHING NASTY!
+Someone could be eavesdropping on you right now (man-in-the-middle attack)!
+It is also possible that a host key has just been changed.
+The fingerprint for the ECDSA key sent by the remote host is
+SHA256:bud2tDwxl9687vMOUUBGXlwZhjxDTu7eVF43ojAu1Pw.
+Please contact your system administrator.
+Add correct host key in /c/Users/mzlogin/.ssh/known_hosts to get rid of this message.
+Offending ECDSA key in /c/Users/mzlogin/.ssh/known_hosts:1
+ECDSA host key for gitlab.xxxx.com has changed and you have requested strict checking.
+Host key verification failed.
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+```
+
+解决方案：
+
+```
+rm ~/.ssh/known_hosts
+```
+
+然后重新操作即可。
+
+### 删除不存在对应远程分支的本地分支
+
+（本小节有效性存疑，有时候并不好使。）
+
+```sh
+$ git remote show origin
+develop                             tracked
+master                              tracked
+feature/new-ui                      tracked
+refs/remotes/origin/feature/test    stale (use 'git remote prune' to remove)
+...
+```
+
+其中 feature/test 就是不存在远程分支的本地分支。
+
+```sh
+$ git remote prune origin
+```
+
+清除完成。

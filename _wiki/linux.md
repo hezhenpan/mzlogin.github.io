@@ -1,7 +1,8 @@
 ---
 layout: wiki
 title: Linux/Unix
-categories: Linux
+cate1: Basis
+cate2: OS
 description: 类 Unix 系统下的一些常用命令和用法。
 keywords: Linux
 ---
@@ -9,6 +10,20 @@ keywords: Linux
 类 Unix 系统下的一些常用命令和用法。
 
 ## 实用命令
+
+### chown
+
+更改文件所有者和组。
+
+比如某文件夹当前所有者是 root，需要更改为 admin：
+
+```sh
+chown -R admin:admin test
+```
+
+### chmod
+
+修改文件权限。
 
 ### fuser
 

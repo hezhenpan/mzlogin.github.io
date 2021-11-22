@@ -8,7 +8,7 @@
 
 * [效果预览](#效果预览)
 * [Fork 指南](#fork-指南)
-* [贴心提示](#贴心提示)
+* [使用文档](#使用文档)
 * [经验与思考](#经验与思考)
 * [联系我](#联系我)
 * [致谢](#致谢)
@@ -31,7 +31,7 @@ Fork 本项目之后，还需要做一些事情才能让你的页面「正确」
 
 2. 修改域名。
 
-   如果你需要绑定自己的域名，那么修改 CNAME 文件的内容；如果不需要绑定自己的域名，那么删掉 CNAME 文件。
+   如果你需要绑定自己的域名，那么修改 CNAME 文件的内容，并参考 [配置 GitHub Pages 站点的自定义域](https://docs.github.com/cn/pages/configuring-a-custom-domain-for-your-github-pages-site) 做好配置；如果不需要绑定自己的域名，那么删掉 CNAME 文件。
 
 3. 修改配置。
 
@@ -54,13 +54,15 @@ Fork 本项目之后，还需要做一些事情才能让你的页面「正确」
 
    pages/about.md 文件内容对应网站的「关于」页面，里面的内容多为个人相关，将它们替换成你自己的信息，包括 \_data 目录下的 skills.yml 和 social.yml 文件里的数据。
 
-## 贴心提示
+## 使用文档
 
-1. 排版建议遵照一定的规范，推荐 [中文文案排版指北（简体中文版）][1]。
+- [本博客模板常见问题 Q & A](https://mazhuang.org/2020/05/03/blog-template-qna/)。
 
-2. 在本地预览博客效果可以参考 [Setting up your Pages site locally with Jekyll][2]。
+- 在本地预览博客效果可以参考 [Setting up your Pages site locally with Jekyll][2]。
 
 ## 经验与思考
+
+* 排版建议遵照一定的规范，推荐 [中文文案排版指北（简体中文版）][1]。
 
 * 简约，尽量每个页面都不展示多余的内容。
 

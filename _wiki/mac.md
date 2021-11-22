@@ -1,7 +1,8 @@
 ---
 layout: wiki
 title: Mac OS X
-categories: Mac
+cate1: Basis
+cate2: OS
 description: 使用 Mac OS X 的一些快捷键和遇到的问题。
 keywords: Mac
 ---
@@ -20,27 +21,36 @@ Cmd --> Command
 
 ## 窗口
 
-| 功能                   | 快捷键  |
-|:-----------------------|:--------|
-| 显示桌面               | F11     |
-| 切换窗口全屏状态       | C-Cmd-F |
-| 隐藏当前程序的所有窗口 | Cmd-H   |
-| 最小化窗口             | Cmd-M   |
-| 关闭窗口               | Cmd-W   |
-| 关闭当前程序           | Cmd-Q   |
-| 新建标签               | Cmd-T   |
-| 新建窗口               | Cmd-N   |
+| 功能                   | 快捷键       |
+|:-----------------------|:-------------|
+| 显示桌面               | F11          |
+| 上/下一个桌面/工作区   | C-Left/Right |
+| 切换窗口全屏状态       | C-Cmd-F      |
+| 隐藏当前程序的所有窗口 | Cmd-H        |
+| 最小化窗口             | Cmd-M        |
+| 关闭窗口               | Cmd-W        |
+| 关闭当前程序           | Cmd-Q        |
+| 新建标签               | Cmd-T        |
+| 新建窗口               | Cmd-N        |
+| 调度中心               | C-Up         |
+| 当前应用的所有窗口     | C-Down       |
 
 ## 程序
 
-| 功能                | 快捷键     |
-|:--------------------|:-----------|
+| 功能                | 快捷键      |
+|:--------------------|:------------|
 | 打开 emoji 表情窗口 | C-Cmd- 空格 |
 | 打开 Spotlight      | C- 空格     |
 | 切换输入法          | Cmd- 空格   |
 | 打开 Alfred         | M- 空格     |
 | 打开 Finder 并查找  | C-M- 空格   |
-| 打开 Launchpad      | 四指合拢   |
+| 打开 Launchpad      | 四指合拢    |
+
+## 音量
+
+| 功能     | 快捷键            |
+|:---------|:------------------|
+| 微调音量 | M-S-音量加/音量减 |
 
 ## 命令行
 
@@ -318,6 +328,12 @@ npm ERR! This is probably not a problem with npm. There is likely additional log
 ```
 sudo xcode-select -s /Applications/Xcode.app/Contents/Developer
 ```
+
+### 通过扩展坞连接的键盘鼠标卡顿断电
+
+我用 MacBook Pro 16 寸 2019 款，通过 biaze 五口扩展坞连接键盘、鼠标、显示器、网线，一直好好的，突然有一天键盘鼠标开始经常卡顿、断电。参考 <https://support.apple.com/zh-cn/HT201295>，重置 SMC 问题也没有解决。
+
+尝试过插别的接口、换扩展坞、只接以上几种设备之一和之二等，都没解决。最后用了个别的鼠标试了下，好了。欲哭无泪。
 
 ## 参考
 

@@ -1,7 +1,8 @@
 ---
 layout: wiki
 title: OneNote
-categories: Tools
+cate1: Tools
+cate2: 
 description: 我最常用的跨平台笔记软件。
 keywords: OneNote, GTD
 ---
@@ -19,7 +20,7 @@ Cmd --> Command
 ### 调整文本格式
 
 | 功能                         | Windows        | Mac OS X        |
-|:-----------------------------|:---------------|:----------------|
+| :--------------------------- | :------------- | :-------------- |
 | 高亮选中文本                 | C-S-h 或 C-M-h |                 |
 | 插入超链接                   | C-k            | Cmd-k           |
 | 复制选中文本的格式（格式刷） | C-S-c          | Cmd-M-c         |
@@ -29,8 +30,8 @@ Cmd --> Command
 | 斜体                         | C-i            | Cmd-i           |
 | 下划线                       | C-u            | Cmd-u           |
 | 删除线                       | C-Hyphen(-)    | C-Cmd-Hyphen(-) |
-| 上标                         | C-S-=          |                 |
-| 下标                         | C-=            |                 |
+| 上标                         | C-S-=          | Cmd-M-S-=       |
+| 下标                         | C-=            | Cmd-M-=         |
 | 无序列表标记                 | C-Period(.)    | Cmd-Period(.)   |
 | 有序列表标记                 | C-Slash(/)     | Cmd-Slash(/)    |
 | 标题一                       | C-M-1          | Cmd-M-1         |
@@ -43,6 +44,15 @@ Cmd --> Command
 | 增大选中文本字体             | C-S->          |                 |
 | 减小选中文本字体             | C-S-<          |                 |
 | 在当前页面显隐基准线         | C-S-r          |                 |
+
+### 视图
+
+| 功能            | Windows | Mac OS X      |
+|:----------------|:--------|:--------------|
+| 显示/隐藏功能区 |         | Cmd-M-R       |
+| 放大页面        |         | Cmd-+         |
+| 缩小页面        |         | Cmd-Hyphen(-) |
+| 重置缩放        |         | Cmd-0         |
 
 ### 插入元素
 
@@ -62,7 +72,7 @@ Cmd --> Command
 | 在当前行上面新建行     | 光标移到行首，Enter | 光标移到行首，Enter |
 | 在当前列右边新建列     | C-M-r               | C-Cmd-r             |
 | 在当前列左边新建列     |                     | C-Cmd-l             |
-| 在当前单元格开始新段落 | M-Enter             |                     |
+| 在当前单元格开始新段落 | M-Enter             | M-Enter             |
 
 ### 选择与移动
 
@@ -73,28 +83,32 @@ Cmd --> Command
 | 将段落下移               | M-S-Down | Cmd-M-Down  |
 | 返回上一个访问过的页面   | M-Left   | C-Cmd-Left  |
 | 前进到后一个访问过的页面 | M-Right  | C-Cmd-Right |
+| 到页面顶端               |          | Cmd-Up      |
+| 到页面底端               |          | Cmd-Down    |
+| 到上一个段落             |          | M-Up        |
+| 到下一个段落             |          | M-Down      |
 
 ### 分区与页面
 
-| 功能                       | Windows     | Mac OS X    |
-|:---------------------------|:------------|:------------|
-| 新建页面到当前分区最后面   | C-n         | Cmd-n       |
-| 在当前页面下新建同级页面   | C-M-n       | Cmd-n       |
-| 在当前页面下新建子页面     | C-M-S-n     |             |
-| 增加页面层级               | C-M-]       | Cmd-M-]     |
-| 减少页面层级               | C-M-[       | Cmd-M-[     |
-| 选中当前页面               | C-M-g       | Cmd-S-a     |
-| 上移当前选中页面           | M-S-Up      | Cmd-M-Up    |
-| 下移当前选中页面           | M-S-Down    | Cmd-M-Down  |
-| 返回访问的上一页           | M-Left      | C-Cmd-Left  |
-| 返回访问的下一页           | M-Right     | C-Cmd-Right |
-| 停靠到桌面                 | C-M-d       |             |
-| 显示上一个分区             | C-S-Tab     |             |
-| 显示下一个分区             | C-Tab       |             |
-| 显示当前分区的上一个页面   | C-Page Up   |             |
-| 显示当前分区的下一个页面   | C-Page Down |             |
-| 显示当前分区的第一个页面   | M-Home      |             |
-| 显示当前分区的最后一个页面 | M-End       |             |
+| 功能                       | Windows     | Mac OS X      |
+|:---------------------------|:------------|:--------------|
+| 新建页面到当前分区最后面   | C-n         | Cmd-n         |
+| 在当前页面下新建同级页面   | C-M-n       | Cmd-n         |
+| 在当前页面下新建子页面     | C-M-S-n     |               |
+| 增加页面层级               | C-M-]       | Cmd-M-]       |
+| 减少页面层级               | C-M-[       | Cmd-M-[       |
+| 选中当前页面               | C-M-g       | Cmd-S-a       |
+| 上移当前选中页面           | M-S-Up      | Cmd-M-Up      |
+| 下移当前选中页面           | M-S-Down    | Cmd-M-Down    |
+| 返回访问的上一页           | M-Left      | C-Cmd-Left    |
+| 返回访问的下一页           | M-Right     | C-Cmd-Right   |
+| 停靠到桌面                 | C-M-d       |               |
+| 显示上一个分区             | C-S-Tab     |               |
+| 显示下一个分区             | C-Tab       |               |
+| 显示当前分区的上一个页面   | C-Page Up   | Cmd-Page Up   |
+| 显示当前分区的下一个页面   | C-Page Down | Cmd-Page Down |
+| 显示当前分区的第一个页面   | M-Home      | M-Home        |
+| 显示当前分区的最后一个页面 | M-End       | M-End         |
 
 ## 小技巧
 
